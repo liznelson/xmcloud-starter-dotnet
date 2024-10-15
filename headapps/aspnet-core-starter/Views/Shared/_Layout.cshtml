@@ -12,5 +12,25 @@
 
 <body>
     @RenderBody()
+    <button id="rainButton"></button>
+    <script>
+	    document.getElementById('rainButton').addEventListener('click', function() {
+		    for (let i = 0; i < 100; i++) {
+			    createRainDrop();
+		    }
+	    });
+
+	    function createRainDrop() {
+		    const drop = document.createElement('div');
+		    drop.className = 'rain-drop';
+		    drop.style.left = Math.random() * window.innerWidth + 'px';
+		    drop.style.animationDuration = Math.random() * 2 + 3 + 's';
+		    document.body.appendChild(drop);
+
+		    setTimeout(() => {
+			    drop.remove();
+		    }, 5000);
+	    }
+    </script>
 </body>
 </html>

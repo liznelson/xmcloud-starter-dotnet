@@ -1935,3 +1935,36 @@ ul li {
   color: #fff;
   max-width: 500px;
 }
+
+#rainButton {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #FF1F38;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    background: url('../img/NET_Core_Logo.svg.png') no-repeat center center;
+    background-size: contain;
+    width: 50px; /* Adjust the width and height as needed */
+    height: 50px;
+}
+
+.rain-drop {
+    position: fixed;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background: url('../img/NET_Core_Logo.svg.png') no-repeat center center;
+    background-size: contain;
+    animation: fall linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
