@@ -12,7 +12,7 @@ builder.Services.AddRouting()
                 .AddMvc();
 
 builder.Services.AddSitecoreLayoutService()
-                .AddGraphQlWithContextHandler("default", sitecoreSettings.EdgeContextId!, siteName: sitecoreSettings.DefaultSiteName!)
+                .AddGraphQlWithContextHandler("default", sitecoreSettings.EdgeContextId!, new Uri("https://edge-platform-staging.sitecore-staging.cloud/v1/content/api/graphql/v1"), sitecoreSettings.DefaultSiteName!)
                 .AsDefaultHandler();
 
 builder.Services.AddSitecoreRenderingEngine(options =>
